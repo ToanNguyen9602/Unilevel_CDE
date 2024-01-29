@@ -8,13 +8,18 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    [Table("User_list")]
-    public class User_list
+    [Table("Answer")]
+    public class Answer
     {
         [Key]
         public int Id { get; set; }
 
         [Column(TypeName = "nvarchar(250)")]
-        public string Name_file { get; set; }
+        public string Name { get; set; }
+
+        public int Survey_id { get; set; }
+
+        [ForeignKey("Survey_id")]
+        public Survey Survey { get; set; }
     }
 }

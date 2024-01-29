@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    [Table("User_list")]
-    public class User_list
+    [Table("Category")]
+    public class Category
     {
         [Key]
         public int Id { get; set; }
 
         [Column(TypeName = "nvarchar(250)")]
-        public string Name_file { get; set; }
+        public string Name { get; set; }
     }
 }
