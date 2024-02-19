@@ -11,7 +11,7 @@ namespace Domain.DbContext
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public DbSet<Area> Areas { get; set; }
-        public DbSet<Position_group> Positions { get; set; }
+/*        public DbSet<Position_group> Positions { get; set; }
         public DbSet<User_list> Users { get; set; }
         public DbSet<Media> Medias { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -78,7 +78,7 @@ namespace Domain.DbContext
                 .HasOne(up => up.Permission)
                 .WithMany()
                 .HasForeignKey(up => up.Permission_id);
-        }
+        }*/
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
