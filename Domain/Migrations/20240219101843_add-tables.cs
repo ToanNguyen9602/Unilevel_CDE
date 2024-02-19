@@ -4,7 +4,7 @@
 
 namespace Domain.Migrations
 {
-    public partial class connectDbclassArea : Migration
+    public partial class addtables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
