@@ -11,13 +11,13 @@ namespace Domain.DbContext
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public DbSet<Area> Areas { get; set; }
-/*        public DbSet<Position_group> Positions { get; set; }
+        public DbSet<Position_group> Positions { get; set; }
         public DbSet<User_list> Users { get; set; }
         public DbSet<Media> Medias { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Distributor> Distributors { get; set; }
-        public DbSet<Entities.Task> Tasks { get; set; }
+        /*public DbSet<Entities.Task> Tasks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Notifi_user> Notifi_Users { get; set; }
         public DbSet<Survey> Surveys { get; set; }
