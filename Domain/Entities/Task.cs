@@ -30,20 +30,20 @@ namespace Domain.Entities
         public DateTime Date_end { get; set; }
 
         [Required]
-        public int Report { get; set; }
+        public int? Report { get; set; }
 
         [Required]
-        public int Implement { get; set; }
+        public int? Implement { get; set; }
 
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; } // Đặt kiểu Nullable cho CategoryId để nó có thể null
 
         [ForeignKey("Report")]
-        public Account Reporter { get; set; }
+        public virtual Account Reporter { get; set; }
 
         [ForeignKey("Implement")]
-        public Account Implementer { get; set; }
+        public virtual Account Implementer { get; set; }
 
         [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

@@ -11,13 +11,13 @@ namespace Domain.DbContext
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public DbSet<Area> Areas { get; set; }
-        public DbSet<Position_group> Positions { get; set; }
+        /*public DbSet<Position_group> Positions { get; set; }
         public DbSet<User_list> Users { get; set; }
         public DbSet<Media> Medias { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Distributor> Distributors { get; set; }
-        /*public DbSet<Entities.Task> Tasks { get; set; }
+        public DbSet<Entities.Task> Tasks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Notifi_user> Notifi_Users { get; set; }
         public DbSet<Survey> Surveys { get; set; }
@@ -42,11 +42,11 @@ namespace Domain.DbContext
         public DbSet<Survey_response> survey_Responses { get; set; }
         public DbSet<Survey_question> survey_Questions { get; set; }
         public DbSet<Survey_response_answer> survey_Response_Answers { get; set; }
-        public DbSet<Survey_campaign> survey_Campaigns { get; set; }
+        public DbSet<Survey_campaign> survey_Campaigns { get; set; }*/
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);    
 
             modelBuilder.Entity<CampaignUser>()
                 .HasKey(cu => new { cu.Campaign_id, cu.Account_id });
@@ -67,7 +67,7 @@ namespace Domain.DbContext
                 .WithMany()
                 .HasForeignKey(sr => sr.Permission_id);
             modelBuilder.Entity<User_permission>()
-       .HasKey(up => new { up.Account_id, up.Permission_id });
+                .HasKey(up => new { up.Account_id, up.Permission_id });
 
             modelBuilder.Entity<User_permission>()
                 .HasOne(up => up.Account)
@@ -78,6 +78,24 @@ namespace Domain.DbContext
                 .HasOne(up => up.Permission)
                 .WithMany()
                 .HasForeignKey(up => up.Permission_id);
+
+            modelBuilder.Entity<Domain.Entities.Task>()
+                .HasOne(t => t.Reporter)
+                .WithMany()
+                .HasForeignKey(t => t.Report)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Domain.Entities.Task>()
+                .HasOne(t => t.Implementer)
+                .WithMany()
+                .HasForeignKey(t => t.Implement)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Domain.Entities.Task>()
+                .HasOne(t => t.Category)
+                .WithMany()
+                .HasForeignKey(t => t.CategoryId)
+                .OnDelete(DeleteBehavior.SetNull);
         }*/
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

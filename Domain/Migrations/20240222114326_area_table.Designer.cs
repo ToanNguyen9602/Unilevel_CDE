@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Domain.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240219103002_are_table")]
-    partial class are_table
+    [Migration("20240222114326_area_table")]
+    partial class area_table
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
