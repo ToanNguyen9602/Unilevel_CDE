@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nBXfhhRMb2c99Gj1d9mMraUZiiWz5Vd6PuvddiMPbnXrG81Jkbe6UfuPOyT6XH9q70bHWhNO5PESE13LwQWFPw==",
+  "dgSpecHash": "2JHy7c6LI0QuBIOvBJ8ekfxad7wxCn2uaMxQuI/W868gVWrcMyobWRZaohDFx4nHZS2oQa13LMN1MBY8Wt34NA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Unilevel_CDE\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

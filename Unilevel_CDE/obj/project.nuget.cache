@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TfjJfxTsQDH7ZXm0AWLmdMVTdkMccffawMfSRiP5sPULQaCtqLNVE0S2fIEXNQ+KMN8ZBl177tzmBLQ411opng==",
+  "dgSpecHash": "aFv+CSByVDHn3SLRSgfBejXobyCFJ6bMiY8VbE/D6QlK597X1y1YmLLYwB9LPxqS5XQBHUP3wixLsm39rPq/VA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Unilevel_CDE\\Unilevel_CDE\\Demo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
