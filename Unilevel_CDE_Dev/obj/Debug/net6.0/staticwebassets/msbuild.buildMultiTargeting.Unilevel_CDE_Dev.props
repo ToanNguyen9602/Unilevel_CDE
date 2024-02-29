@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Unilevel_CDE_Dev.props" />
+</Project>
