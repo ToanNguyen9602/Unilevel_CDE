@@ -11,7 +11,7 @@ namespace Unilevel_CDE_Dev.Services
             db = _db;
         }
 
-        public bool Create(Account Account)
+        public bool Create(Account account)
         {
             try
             {
@@ -29,14 +29,19 @@ namespace Unilevel_CDE_Dev.Services
             throw new NotImplementedException();
         }
 
-        public bool Login(string username, string password)
+        public bool Login(int id, string password)
         {
-            var account = db.Accounts.SingleOrDefault(a => a.Username == username && a.Status);
+            var account = db.Accounts.SingleOrDefault(a => a.Id == id && a.Password.Equals(password));
             if (account != null)
             {
                 return BCrypt.Net.BCrypt.Verify(password, account.Password);
             }
             return false;
+        }
+
+        public bool Login(string username, string password)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(Account account)

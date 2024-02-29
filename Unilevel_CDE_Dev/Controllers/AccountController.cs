@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Unilevel_CDE_Dev.Models;
+using Unilevel_CDE_Dev.Services;
 
 namespace Unilevel_CDE_Dev.Controllers
 {
     [Route("api/account")]
     public class AccountController : Controller
     {
-        private AccountService AccountService;
+        private AccountService accountService;
         private IWebHostEnvironment webHostEnvironment;
 
         public IActionResult Index()
@@ -22,7 +24,7 @@ namespace Unilevel_CDE_Dev.Controllers
                 account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
                 return Ok(new
                 {
-                    status = AccountService.Create(account)
+                    status = accountService.Create(account)
                 });
             }
             catch
@@ -38,7 +40,7 @@ namespace Unilevel_CDE_Dev.Controllers
             {
                 return Ok(new
                 {
-                    status = AccountService.Login(username, password)
+                    status = accountService.Login(username, password)
                 });
             }
             catch
@@ -56,7 +58,7 @@ namespace Unilevel_CDE_Dev.Controllers
                 account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
                 return Ok(new
                 {
-                    status = AccountService.Update(account)
+                    status = accountService.Update(account)
                 });
             }
             catch
