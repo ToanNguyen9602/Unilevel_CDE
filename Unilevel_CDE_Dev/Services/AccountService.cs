@@ -6,7 +6,8 @@ namespace Unilevel_CDE_Dev.Services
     {
         public bool Create(Account Account);
         public dynamic FindId(int id);
-        public bool Login(string username, string password);
+        public bool Login(int id, string password);
         public bool Update(Account account);
+        public dynamic findAll();
     }
 }

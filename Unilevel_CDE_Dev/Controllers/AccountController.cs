@@ -10,10 +10,51 @@ namespace Unilevel_CDE_Dev.Controllers
         private AccountService accountService;
         private IWebHostEnvironment webHostEnvironment;
 
-        public IActionResult Index()
+        [HttpGet("demo1")]
+        [Produces("application/json")]
+        public IActionResult Demo1()
         {
-            return View();
+            try
+            {
+                return Ok(new
+                {
+                    Msg = "Hello World!"
+                });
+            } catch (Exception ex)
+            {
+                return BadRequest();
+            }
+            
         }
+
+        [Produces("application/json")]
+        [HttpGet("findbyid/{id}")]
+        public IActionResult FindId(int id)
+        {
+            try
+            {
+                return Ok(accountService.FindId(id));
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        [Produces("application/json")]
+        [HttpGet("findAll")]
+        public IActionResult FindAll()
+        {
+            try
+            {
+                return Ok(accountService.findAll());
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
         [Consumes("application/json")]
         [Produces("application/json")]
         [HttpPost("create")]
@@ -34,13 +75,13 @@ namespace Unilevel_CDE_Dev.Controllers
         }
         [Produces("application/json")]
         [HttpGet("login/{username}&{password}")]
-        public IActionResult FindByCreated(string username, string password)
+        public IActionResult FindByCreated(int id, string password)
         {
             try
             {
                 return Ok(new
                 {
-                    status = accountService.Login(username, password)
+                    status = accountService.Login(id, password)
                 });
             }
             catch
