@@ -37,27 +37,27 @@ namespace Unilevel_CDE_Dev.Services
                 Description = a.Description,
                 Status = a.Status,
                 Created = a.Created,
-                Area_id = a.AreaId,
-                Position_group = a.PositionGroup,
+                AreaId = a.Area.Id,
+                PositionGroup = a.PositionGroup
             }).ToList();
         }
 
         public dynamic FindId(int id)
         {
-            return db.Accounts.Where(p => p.Id == id).Select(p => new
+            return db.Accounts.Where(p => p.Id == id).Select(a => new
             {
-                Id = p.Id,
-                Password = p.Password,
-                Fullname = p.Fullname,
-                Email = p.Email,
-                Phone = p.Phone,
-                Address = p.Address,
-                Photo = p.Photo,
-                Description = p.Description,
-                Status = p.Status,
-                Created = p.Created,
-                Area_id = p.AreaId,
-                Position_group = p.PositionGroup,
+                Id = a.Id,
+                Password = a.Password,
+                Fullname = a.Fullname,
+                Email = a.Email,
+                Phone = a.Phone,
+                Address = a.Address,
+                Photo = a.Photo,
+                Description = a.Description,
+                Status = a.Status,
+                Created = a.Created,
+                AreaId = a.AreaId,
+                PositionGroup = a.PositionGroup
             }).FirstOrDefault();
         }
 
@@ -75,7 +75,6 @@ namespace Unilevel_CDE_Dev.Services
         {
             try
             {
-
                 db.Entry(account).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 return db.SaveChanges() > 0;
             }

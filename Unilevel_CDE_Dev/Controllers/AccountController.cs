@@ -10,6 +10,11 @@ namespace Unilevel_CDE_Dev.Controllers
         private AccountService accountService;
         private IWebHostEnvironment webHostEnvironment;
 
+        public AccountController(AccountService _accountService, IWebHostEnvironment _webHostEnvironment)
+        {
+            this.accountService = _accountService;
+            this.webHostEnvironment = _webHostEnvironment;
+        }
         [HttpGet("demo1")]
         [Produces("application/json")]
         public IActionResult Demo1()
@@ -28,8 +33,8 @@ namespace Unilevel_CDE_Dev.Controllers
         }
 
         [Produces("application/json")]
-        [HttpGet("findbyid/{id}")]
-        public IActionResult FindId(int id)
+        [Route("find/{id}")]
+        public IActionResult Find(int id)
         {
             try
             {
@@ -42,7 +47,7 @@ namespace Unilevel_CDE_Dev.Controllers
         }
 
         [Produces("application/json")]
-        [HttpGet("findAll")]
+        [Route("findAll")]
         public IActionResult FindAll()
         {
             try
@@ -53,6 +58,7 @@ namespace Unilevel_CDE_Dev.Controllers
             {
                 return BadRequest();
             }
+          
         }
 
         [Consumes("application/json")]
