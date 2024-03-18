@@ -15,6 +15,9 @@ builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingPr
 
 builder.Services.AddScoped<AccountService, AccountServiceImpl>();
 builder.Services.AddScoped<AreaService, AreaServiceImpl>();
+builder.Services.AddScoped<PositionGroupService, PositionGroupServiceImpl>();
+builder.Services.AddScoped<DistributorService, DistributorServiceImpl>();
+
 
 var app = builder.Build();
 
