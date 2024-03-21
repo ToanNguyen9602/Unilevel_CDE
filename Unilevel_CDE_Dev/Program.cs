@@ -17,7 +17,7 @@ builder.Services.AddScoped<AccountService, AccountServiceImpl>();
 builder.Services.AddScoped<AreaService, AreaServiceImpl>();
 builder.Services.AddScoped<PositionGroupService, PositionGroupServiceImpl>();
 builder.Services.AddScoped<DistributorService, DistributorServiceImpl>();
-
+builder.Services.AddScoped<CategoryService, CategoryServiceImpl>();
 
 var app = builder.Build();
 
