@@ -18,6 +18,7 @@ builder.Services.AddScoped<AreaService, AreaServiceImpl>();
 builder.Services.AddScoped<PositionGroupService, PositionGroupServiceImpl>();
 builder.Services.AddScoped<DistributorService, DistributorServiceImpl>();
 builder.Services.AddScoped<CategoryService, CategoryServiceImpl>();
+builder.Services.AddScoped<PermissionService, PermissionServiceImpl>();
 
 var app = builder.Build();
 
